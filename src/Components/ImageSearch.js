@@ -26,10 +26,12 @@ const ImageSearch =({setImageList})=>{
         .then((response) => {
             console.log(response.data);
             setImageList(response.data.results);
+            searchQuery("");
         })
         .catch((error) => {
             console.log(error);
         })
+        
     }
     return(
         <div>
