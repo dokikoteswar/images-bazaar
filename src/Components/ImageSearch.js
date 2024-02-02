@@ -26,7 +26,7 @@ const ImageSearch =({setImageList})=>{
         .then((response) => {
             console.log(response.data);
             setImageList(response.data.results);
-            searchQuery("");
+            setSearchQuery("");
         })
         .catch((error) => {
             console.log(error);
