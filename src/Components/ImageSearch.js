@@ -19,7 +19,8 @@ const ImageSearch =({setImageList})=>{
             Authorization : `Client-ID ${process.env.REACT_APP_UNSPLASH_ACCESS_KEY}`
            },
             params: {
-                query: searchQuery || "random"
+                query: searchQuery || "random",
+                per_page: 300
             }
         })
         .then((response) => {
@@ -34,7 +35,7 @@ const ImageSearch =({setImageList})=>{
         <div>
              <form   onSubmit={handelSubmit}>
                 <input  type="text" value={searchQuery} onChange={(e)=>{setSearchQuery(e.target.value)}}/>
-                <button type="submit">Search Images</button>
+                <button className="rainbow rainbow-4 btn" type="submit">Search</button>
              </form>
         </div>
     )

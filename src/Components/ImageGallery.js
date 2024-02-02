@@ -4,10 +4,10 @@ import React from "react";
 
 const ImageGallery = ({imageList})=>{
     return(
-      <div>
+  <div  className="Image">
         {
            imageList.map((item)=>(
-                <img key={item.id}
+                <img key={item.id} 
                 src={item.urls.small_s3} 
                 alt={item.alt_description}
               />

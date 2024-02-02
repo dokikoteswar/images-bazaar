@@ -4,11 +4,14 @@ import ImageGallery from "./Components/ImageGallery";
 
 const App = ()=>{
   const [imageList, setImageList] = useState([]);
+
   return(
    
       <div>
-      <h1>Image bazaar</h1>
+      <div className="header-top">
+      <h1 >Image bazaar</h1>
       <ImageSearch setImageList={setImageList}/>
+      </div>
       <ImageGallery imageList={imageList}/>
       </div>
 
